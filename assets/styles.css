@@ -163,7 +163,7 @@ img { max-width: 100%; display: block; }
   height: 76px;
 }
 .brand { display: flex; align-items: center; gap: 10px; }
-.brand img { height: 45px; width: auto; }
+.brand img { height: 51px; width: auto; }
 
 .nav-links {
   display: flex;
