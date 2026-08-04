@@ -163,7 +163,7 @@ img { max-width: 100%; display: block; }
   height: 76px;
 }
 .brand { display: flex; align-items: center; gap: 10px; }
-.brand img { height: 51px; width: auto; }
+.brand img { height: 42px; width: auto; }
 
 .nav-links {
   display: flex;
@@ -237,45 +237,15 @@ img { max-width: 100%; display: block; }
 .hero .lede { font-size: 1.15rem; max-width: 46ch; }
 .hero-cta-row { display: flex; gap: 14px; margin-top: 30px; flex-wrap: wrap; }
 
-/* Signature: stacked-card visual */
-.card-stack {
+/* Signature: directory -> lists -> Outlook/mobile flow visual */
+.hero-visual {
   position: relative;
-  height: 340px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
-.stack-card {
-  position: absolute;
-  border-radius: var(--radius-lg);
-  box-shadow: var(--shadow-card);
-  padding: 22px;
-  width: 82%;
-}
-.stack-card.c1 {
-  background: var(--mint-soft);
-  top: 44px; left: 34px;
-  width: 74%;
-  opacity: 0.65;
-  transform: rotate(4deg);
-}
-.stack-card.c2 {
-  background: linear-gradient(160deg, #fff, var(--mint-soft));
-  border: 1px solid var(--line);
-  top: 22px; left: 17px;
-  width: 78%;
-  opacity: 0.9;
-  transform: rotate(2deg);
-}
-.stack-card.c3 {
-  background: #fff;
-  border: 1px solid var(--line);
-  top: 0; left: 0;
-  width: 82%;
-  z-index: 2;
-}
-.stack-card.c3 .dot { width: 42px; height: 42px; border-radius: 12px; background: var(--blue); margin-bottom: 14px; }
-.stack-card .line { height: 9px; border-radius: 5px; background: var(--line); margin-bottom: 10px; }
-.stack-card .line.short { width: 55%; }
-.stack-card .line.blue { background: var(--blue); width: 40%; }
-.stack-card .line.teal { background: var(--teal); width: 30%; }
+.hero-visual svg { width: 100%; height: auto; max-width: 480px; }
+.hero-visual text { font-family: var(--font-body); }
 
 /* ---------- Sections ---------- */
 section { padding: 76px 0; }
