@@ -49,45 +49,47 @@
             </marker>
           </defs>
 
-          <!-- Directory source -->
-          <rect x="14" y="172" width="108" height="64" rx="14" fill="#0270FD"/>
-          <text x="68" y="199" text-anchor="middle" fill="#ffffff" font-size="14" font-weight="700">Directory</text>
-          <text x="68" y="217" text-anchor="middle" fill="#CFE3FF" font-size="11">one source</text>
+          <!-- Source: Work Contacts -->
+          <rect x="14" y="168" width="114" height="68" rx="14" fill="#02C2B3"/>
+          <text x="71" y="196" text-anchor="middle" fill="#ffffff" font-size="14" font-weight="700">Work</text>
+          <text x="71" y="214" text-anchor="middle" fill="#E3FBF8" font-size="13" font-weight="600">Contacts</text>
 
-          <!-- Connector: directory to lists -->
-          <path d="M122 195 L184 88" stroke="#D7DFE9" stroke-width="1.4" fill="none" marker-end="url(#arrow)"/>
-          <path d="M122 204 L184 202" stroke="#D7DFE9" stroke-width="1.4" fill="none" marker-end="url(#arrow)"/>
-          <path d="M122 213 L184 314" stroke="#D7DFE9" stroke-width="1.4" fill="none" marker-end="url(#arrow)"/>
+          <!-- Connectors: source to recipient groups -->
+          <path d="M128 182 L186 88" stroke="#D7DFE9" stroke-width="1.4" fill="none" marker-end="url(#arrow)"/>
+          <path d="M128 202 L186 202" stroke="#D7DFE9" stroke-width="1.4" fill="none" marker-end="url(#arrow)"/>
+          <path d="M128 222 L186 314" stroke="#D7DFE9" stroke-width="1.4" fill="none" marker-end="url(#arrow)"/>
 
-          <!-- Lists -->
-          <rect x="188" y="64" width="104" height="48" rx="10" fill="#0270FD"/>
-          <text x="240" y="93" text-anchor="middle" fill="#ffffff" font-size="13" font-weight="600">Vendors</text>
+          <!-- Recipient groups: who the list is assigned to -->
+          <rect x="186" y="64" width="114" height="48" rx="10" fill="#0270FD"/>
+          <text x="243" y="93" text-anchor="middle" fill="#ffffff" font-size="12" font-weight="600">Sales Team</text>
 
-          <rect x="188" y="178" width="104" height="48" rx="10" fill="#02C2B3"/>
-          <text x="240" y="207" text-anchor="middle" fill="#ffffff" font-size="13" font-weight="600">Sales</text>
+          <rect x="186" y="178" width="114" height="48" rx="10" fill="#0270FD"/>
+          <text x="243" y="207" text-anchor="middle" fill="#ffffff" font-size="12" font-weight="600">Field Crew</text>
 
-          <rect x="188" y="290" width="104" height="48" rx="10" fill="#90E0D8"/>
-          <text x="240" y="319" text-anchor="middle" fill="#0B4A44" font-size="13" font-weight="600">Field crew</text>
+          <rect x="186" y="290" width="114" height="48" rx="10" fill="#0270FD"/>
+          <text x="243" y="319" text-anchor="middle" fill="#ffffff" font-size="12" font-weight="600">Seattle Office</text>
 
-          <!-- Connectors: lists to Outlook -->
-          <path d="M292 88 L372 100" stroke="#0270FD" stroke-width="1.2" fill="none" opacity="0.4" marker-end="url(#arrow)"/>
-          <path d="M292 202 L372 108" stroke="#02C2B3" stroke-width="1.2" fill="none" opacity="0.4" marker-end="url(#arrow)"/>
+          <!-- Connectors: recipient groups converge to a single distribution point -->
+          <path d="M300 88 L345 201" stroke="#0270FD" stroke-width="1.2" fill="none" opacity="0.35"/>
+          <path d="M300 202 L345 201" stroke="#0270FD" stroke-width="1.2" fill="none" opacity="0.35"/>
+          <path d="M300 314 L345 201" stroke="#0270FD" stroke-width="1.2" fill="none" opacity="0.35"/>
+          <circle cx="345" cy="201" r="4.5" fill="#0270FD"/>
 
-          <!-- Connectors: lists to Mobile -->
-          <path d="M292 202 L372 268" stroke="#02C2B3" stroke-width="1.2" fill="none" opacity="0.4" marker-end="url(#arrow)"/>
-          <path d="M292 314 L372 276" stroke="#6FCFC5" stroke-width="1.2" fill="none" opacity="0.5" marker-end="url(#arrow)"/>
+          <!-- Connectors: distribution point diverges to Outlook and iPhone -->
+          <path d="M345 201 L376 94" stroke="#0270FD" stroke-width="1.4" fill="none" marker-end="url(#arrow)"/>
+          <path d="M345 201 L390 283" stroke="#0270FD" stroke-width="1.4" fill="none" marker-end="url(#arrow)"/>
 
-          <!-- Outlook endpoint: generic envelope, no trademarked icon -->
-          <rect x="376" y="66" width="80" height="56" rx="8" fill="#ffffff" stroke="#C6D0DD" stroke-width="1.4"/>
-          <path d="M378 70 L416 98 L454 70" fill="none" stroke="#C6D0DD" stroke-width="1.4"/>
+          <!-- Outlook endpoint: generic envelope, blue as a nod to Outlook, no trademarked icon -->
+          <rect x="376" y="66" width="80" height="56" rx="8" fill="#0270FD"/>
+          <path d="M378 70 L416 98 L454 70" fill="none" stroke="#ffffff" stroke-width="1.4"/>
           <text x="416" y="140" text-anchor="middle" fill="#0F1B2D" font-size="13" font-weight="600">Outlook</text>
 
-          <!-- Mobile endpoint: generic phone silhouette, no trademarked icon -->
+          <!-- iPhone endpoint: neutral device shell, generic silhouette, no trademarked icon -->
           <rect x="390" y="234" width="52" height="98" rx="12" fill="#ffffff" stroke="#C6D0DD" stroke-width="1.4"/>
           <rect x="410" y="242" width="12" height="3" rx="1.5" fill="#C6D0DD"/>
           <rect x="398" y="254" width="36" height="8" rx="2" fill="#0270FD"/>
-          <rect x="398" y="266" width="36" height="8" rx="2" fill="#02C2B3"/>
-          <rect x="398" y="278" width="36" height="8" rx="2" fill="#90E0D8"/>
+          <rect x="398" y="266" width="36" height="8" rx="2" fill="#0270FD" opacity="0.7"/>
+          <rect x="398" y="278" width="36" height="8" rx="2" fill="#0270FD" opacity="0.45"/>
           <circle cx="416" cy="320" r="5" fill="none" stroke="#C6D0DD" stroke-width="1.4"/>
           <text x="416" y="352" text-anchor="middle" fill="#0F1B2D" font-size="13" font-weight="600">iPhone</text>
         </svg>
