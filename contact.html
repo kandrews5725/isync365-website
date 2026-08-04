@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Request Demo — iSync365</title>
+<meta name="description" content="See iSync365 running on your own directory. Tell us a bit about your organization and we'll set up a short demo.">
+<link rel="icon" href="assets/logo.png">
+<link rel="stylesheet" href="assets/styles.css">
+<script src="https://www.google.com/recaptcha/api.js" async defer></script>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container">
+    <a href="index.html" class="brand"><img src="assets/logo.png" alt="iSync365"></a>
+    <nav class="nav-links" id="nav-links">
+      <a href="index.html">Home</a>
+      <a href="features.html">Features</a>
+      <a href="compare.html">Compare</a>
+      <a href="security.html">Security &amp; Compliance</a>
+      <a href="pricing.html">Pricing</a>
+    </nav>
+    <div class="header-actions">
+      <a href="contact.html" class="btn btn-primary">Request Demo</a>
+      <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main>
+  <section class="page-hero center" style="max-width:640px; margin:0 auto; padding-bottom:0;">
+    <div class="container">
+      <span class="eyebrow">Request Demo</span>
+      <h1>See it running on your own directory.</h1>
+      <p class="lede" style="margin:0 auto;">Tell us a bit about your organization, and we'll set up a short demo — no pressure, no long sales process.</p>
+    </div>
+  </section>
+
+  <section>
+    <div class="container">
+      <div class="form-card">
+        <!-- Replace YOUR_FORM_ID with your actual Formspree endpoint -->
+        <form id="demo-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+          <div class="field">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" required>
+          </div>
+          <div class="field">
+            <label for="email">Work email</label>
+            <input type="email" id="email" name="email" required>
+          </div>
+          <div class="field">
+            <label for="company">Company name</label>
+            <input type="text" id="company" name="company" required>
+          </div>
+          <div class="field">
+            <label for="users">Approximate number of users</label>
+            <input type="text" id="users" name="approx_users" placeholder="e.g. 25">
+          </div>
+          <div class="field">
+            <label for="current_tool">Current tool (if any) <span class="optional">— optional</span></label>
+            <select id="current_tool" name="current_tool">
+              <option value="">Select one</option>
+              <option value="CiraSync">CiraSync</option>
+              <option value="Contactzilla">Contactzilla</option>
+              <option value="Spreadsheet or manual">Spreadsheet or manual</option>
+              <option value="None">None</option>
+              <option value="Other">Other</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="notes">Anything else we should know? <span class="optional">— optional</span></label>
+            <textarea id="notes" name="notes"></textarea>
+          </div>
+          <div class="field">
+            <div class="g-recaptcha" data-sitekey="YOUR_RECAPTCHA_SITE_KEY"></div>
+          </div>
+          <button type="submit" class="btn btn-primary" style="width:100%;">Request Demo</button>
+          <p id="form-status" class="form-note" style="display:none; color:#c0392b;"></p>
+        </form>
+
+        <div id="form-success">
+          <div class="icon-badge">✓</div>
+          <h3>Thanks — we'll be in touch shortly</h3>
+          <p>We'll reach out to set up a time that works for you.</p>
+        </div>
+
+        <p class="form-note">We'll only use this to follow up about your demo. No spam, ever.</p>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <img src="assets/logo.png" alt="iSync365">
+        <p>Company directory sync for Outlook and mobile — organized by list, built for how your business actually works.</p>
+      </div>
+      <div class="footer-links">
+        <div class="footer-col">
+          <h4>Product</h4>
+          <a href="features.html">Features</a>
+          <a href="compare.html">Compare</a>
+          <a href="security.html">Security &amp; Compliance</a>
+          <a href="pricing.html">Pricing</a>
+        </div>
+        <div class="footer-col">
+          <h4>Get started</h4>
+          <a href="contact.html">Request Demo</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">&copy; <span id="year"></span> iSync365. All rights reserved.</div>
+  </div>
+</footer>
+
+<script src="assets/script.js"></script>
+<script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>

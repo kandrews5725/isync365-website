@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Security &amp; Compliance — iSync365</title>
+<meta name="description" content="How iSync365 handles contact data, credentials, and offboarding — dedicated CardDAV accounts, automatic revocation, and why we don't rely on Exchange ActiveSync.">
+<link rel="icon" href="assets/logo.png">
+<link rel="stylesheet" href="assets/styles.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container">
+    <a href="index.html" class="brand"><img src="assets/logo.png" alt="iSync365"></a>
+    <nav class="nav-links" id="nav-links">
+      <a href="index.html">Home</a>
+      <a href="features.html">Features</a>
+      <a href="compare.html">Compare</a>
+      <a href="security.html" class="active">Security &amp; Compliance</a>
+      <a href="pricing.html">Pricing</a>
+    </nav>
+    <div class="header-actions">
+      <a href="contact.html" class="btn btn-primary">Request Demo</a>
+      <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main>
+  <section class="page-hero">
+    <div class="container">
+      <span class="eyebrow">Security &amp; Compliance</span>
+      <h1>Built with PII lifecycle and access control in mind from day one.</h1>
+      <p class="lede">How contact data moves, where it lives, and what happens when someone's access changes.</p>
+    </div>
+  </section>
+
+  <section style="padding-top:20px;">
+    <div class="container">
+      <div class="grid-2" style="margin-bottom:24px;">
+        <div class="card">
+          <h3>Where your contact data actually lives</h3>
+          <p>Some contact-sync tools deliver mobile updates by writing into an app or account the employee already has on their phone. iSync365 avoids this by using a dedicated, company-provisioned CardDAV account — never a personal one.</p>
+        </div>
+        <div class="card">
+          <h3>Two ways in, one standard of security</h3>
+          <p>For company-managed devices, iSync365 can deploy a configuration profile the same way most enterprise tools do. For personal or unmanaged devices — no MDM, no company profile — we generate a separate, human-readable passphrase for that device's CardDAV account: long and random enough to resist brute-force guessing, short enough that someone can type it in by hand without errors. Each device gets its own distinct credential, and failed logins are rate-limited.</p>
+        </div>
+        <div class="card">
+          <h3>Revocation happens automatically, no device cooperation required</h3>
+          <p>When someone's removed from a contact list, nothing needs to happen on their device. The connection can stay in place; it's simply empty of anything they no longer have access to. The next sync clears it out on its own — there's no remote wipe command to send and no dependency on a management profile being present to enforce it.</p>
+        </div>
+        <div class="card">
+          <h3>Clean offboarding, no orphaned data</h3>
+          <p>List membership functions as a real access-control decision, admin-controlled per list. When an employee leaves the company or changes roles, removing them from lists is the whole process — nothing lingers on a personal or field device after the fact.</p>
+        </div>
+      </div>
+
+      <div class="callout">
+        <h3>EAS vs. CardDAV — why the protocol underneath matters</h3>
+        <p>Many contact-sync tools rely on Exchange ActiveSync (EAS), a protocol Microsoft first shipped in the mid-2000s. Microsoft itself is now phasing it out: starting in 2026, Exchange Online will stop accepting outdated EAS client versions, and by the end of the year, EAS's legacy certificate-based authentication method is being retired in favor of modern, Entra ID-based authentication. Security researchers have also documented real vulnerabilities in legacy EAS implementations, including credential exposure under certain conditions.</p>
+        <p>iSync365 doesn't rely on EAS at all. Mobile devices connect over CardDAV, an open, modern standard — paired with per-device credentials and Microsoft Graph on the Outlook side, both built around current authentication practices rather than a protocol Microsoft is actively retiring.</p>
+      </div>
+
+      <div class="callout" style="border-color:var(--teal); background:var(--mint-soft);">
+        <h3>True zero-touch setup, even on Microsoft 365</h3>
+        <p>Because Apple automatically upgrades Exchange ActiveSync connections to Microsoft 365 to use OAuth authentication, EAS setup always requires the user to sign in manually — even when pushed through MDM. There's no way to pre-fill that step; it's a requirement of OAuth itself, not a configuration limitation.</p>
+        <p>iSync365's CardDAV connection doesn't have that constraint. The credential can be included directly in the setup profile, so the address book appears on the device fully configured — no sign-in step, no prompt, nothing for the employee to do. And because our CardDAV server is one we operate — not a third party requiring its own sign-in flow — standard credential-based authentication remains a fully supported part of how it works, not something being phased out from under it.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-soft">
+    <div class="container">
+      <div class="cta-band" style="background:linear-gradient(135deg, var(--teal-dark), var(--teal));">
+        <h2>Questions about how this fits your environment?</h2>
+        <a href="contact.html" class="btn btn-on-dark">Request Demo</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <img src="assets/logo.png" alt="iSync365">
+        <p>Company directory sync for Outlook and mobile — organized by list, built for how your business actually works.</p>
+      </div>
+      <div class="footer-links">
+        <div class="footer-col">
+          <h4>Product</h4>
+          <a href="features.html">Features</a>
+          <a href="compare.html">Compare</a>
+          <a href="security.html">Security &amp; Compliance</a>
+          <a href="pricing.html">Pricing</a>
+        </div>
+        <div class="footer-col">
+          <h4>Get started</h4>
+          <a href="contact.html">Request Demo</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">&copy; <span id="year"></span> iSync365. All rights reserved.</div>
+  </div>
+</footer>
+
+<script src="assets/script.js"></script>
+<script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>
