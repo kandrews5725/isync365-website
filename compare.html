@@ -44,7 +44,7 @@
       <div class="landscape">
         <div class="row">
           <strong>CiraSync</strong>
-          <p class="mt-0" style="margin:0;">Established Outlook/mobile sync tool. Full multi-list management sits behind its Enterprise tier; CardDAV-based mobile delivery requires MDM enrollment on the device.</p>
+          <p class="mt-0" style="margin:0;">Established Outlook/mobile sync tool with several delivery methods to choose from. Full multi-list management sits behind its Enterprise plan; delivering a truly separate address book to unmanaged devices requires MDM or their companion app.</p>
         </div>
         <div class="row">
           <strong>Contactzilla</strong>
@@ -82,42 +82,42 @@
             <tr>
               <td>Mobile delivery mechanism</td>
               <td class="us">Dedicated CardDAV account, separate address book per list</td>
-              <td>Native Exchange sync, or CardDAV via MDM-deployed profile</td>
+              <td>Several methods depending on setup — Outlook/Exchange ActiveSync write into the mailbox, or CardDAV via MDM for a separate managed container</td>
               <td>CardDAV, dedicated account</td>
               <td>Varies</td>
             </tr>
             <tr>
-              <td>Works on personal/unmanaged phones without MDM</td>
+              <td>Separate address book on unmanaged/BYOD devices, no extra app required</td>
               <td class="us">Yes</td>
-              <td>No — CardDAV path requires MDM enrollment</td>
+              <td>No — unmanaged options land in the existing mailbox-connected folder; true isolation requires MDM or installing their companion app</td>
               <td>Varies by plan</td>
               <td>N/A</td>
             </tr>
             <tr>
-              <td>Independent Outlook/mobile delivery per person</td>
+              <td>Choose delivery independently per person, within one dashboard</td>
               <td class="us">Yes — assign either, both, or neither, per person</td>
-              <td>No — EAS mirrors whatever's in Outlook</td>
+              <td>Delivery method is generally chosen once per rollout or device type, not toggled per person — running more than one method on the same device risks duplicate contacts, per their own guidance</td>
               <td>N/A (mobile-only)</td>
               <td>N/A</td>
             </tr>
             <tr>
               <td>CSV import</td>
-              <td class="us">Yes</td>
-              <td>Not evident in product</td>
+              <td class="us">Yes, direct</td>
+              <td>Indirect — contacts must first exist in an M365 mailbox/contact source, then get selected as a sync source</td>
               <td>Yes</td>
               <td>Not applicable — syncs between existing apps only</td>
             </tr>
             <tr>
               <td>Manual contact entry</td>
-              <td class="us">Yes</td>
-              <td>Not evident in product</td>
+              <td class="us">Yes, direct</td>
+              <td>Indirect — same as CSV import, via an M365 source first</td>
               <td>Yes</td>
               <td>Not applicable</td>
             </tr>
             <tr>
               <td>Contact photos synced to mobile</td>
               <td class="us">Yes</td>
-              <td>Unknown</td>
+              <td>Yes, on their Enterprise plan (not supported on their free Personal plan)</td>
               <td>Unknown</td>
               <td>Unknown</td>
             </tr>

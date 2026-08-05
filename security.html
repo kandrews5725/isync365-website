@@ -44,7 +44,7 @@
       <div class="grid-2" style="margin-bottom:24px;">
         <div class="card">
           <h3>Where your contact data actually lives</h3>
-          <p>Some contact-sync tools deliver mobile updates by writing into an app or account the employee already has on their phone. iSync365 avoids this by using a dedicated, company-provisioned CardDAV account — never a personal one.</p>
+          <p>iSync365 uses a dedicated, company-provisioned CardDAV account for every device — never an account tied to anyone's personal cloud service. Whether a device is company-managed or personal and unmanaged, the account is created and controlled entirely on our side.</p>
         </div>
         <div class="card">
           <h3>Two ways in, one standard of security</h3>
@@ -67,9 +67,9 @@
       </div>
 
       <div class="callout" style="border-color:var(--teal); background:var(--mint-soft);">
-        <h3>True zero-touch setup, even on Microsoft 365</h3>
-        <p>Because Apple automatically upgrades Exchange ActiveSync connections to Microsoft 365 to use OAuth authentication, EAS setup always requires the user to sign in manually — even when pushed through MDM. There's no way to pre-fill that step; it's a requirement of OAuth itself, not a configuration limitation.</p>
-        <p>iSync365's CardDAV connection doesn't have that constraint. The credential can be included directly in the setup profile, so the address book appears on the device fully configured — no sign-in step, no prompt, nothing for the employee to do. And because our CardDAV server is one we operate — not a third party requiring its own sign-in flow — standard credential-based authentication remains a fully supported part of how it works, not something being phased out from under it.</p>
+        <h3>Zero-touch delivery, without requiring MDM</h3>
+        <p>On a company-managed device with MDM in place, a CardDAV profile can be silent and zero-touch — that's true for iSync365 and for comparable MDM-based tools alike. The real gap shows up on personal, unmanaged devices. Without MDM, delivery generally has to fall back to Outlook or Exchange ActiveSync — and because Apple automatically upgrades EAS connections to Microsoft 365 to use OAuth authentication, that path always requires the user to sign in manually. There's no way to pre-fill that step; it's a requirement of OAuth itself, not a configuration limitation.</p>
+        <p>iSync365's CardDAV connection works the same whether a device is managed or not, so it stays zero-touch even without MDM: the credential is included directly in the setup profile, and the address book appears fully configured — no sign-in step, no prompt, nothing for the employee to do.</p>
       </div>
     </div>
   </section>
