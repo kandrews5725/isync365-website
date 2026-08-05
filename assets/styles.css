@@ -223,6 +223,7 @@ img { max-width: 100%; display: block; }
   padding: 84px 0 60px;
   position: relative;
   overflow: hidden;
+  background: var(--bg-soft);
 }
 .hero-grid {
   display: grid;
