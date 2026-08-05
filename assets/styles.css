@@ -292,7 +292,7 @@ section { padding: 76px 0; }
   display: flex; align-items: center; justify-content: center;
   margin-bottom: 14px;
 }
-.step:nth-child(2) .num { background: #0098D8; }
+.step:nth-child(2) .num { background: #2DADDA; }
 .step:nth-child(3) .num { background: var(--blue); }
 
 /* ---------- CTA band ---------- */
