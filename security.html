@@ -45,32 +45,30 @@
       <div class="grid-2" style="margin-bottom:24px;">
         <div class="card">
           <h3>Where your contact data actually lives</h3>
-          <p>iSync365 uses a dedicated, company-provisioned CardDAV account for every device — never an account tied to anyone's personal cloud service. Whether a device is company-managed or personal and unmanaged, the account is created and controlled entirely on our side.</p>
+          <p>On Outlook, contacts are written directly into each person's own mailbox inside your organization's Microsoft 365 tenant. On mobile, iSync365 uses a dedicated, company-provisioned CardDAV account for every device — never an account tied to anyone's personal cloud service. Whether a device is company-managed or personal and unmanaged, the delivery account is created and controlled entirely on our side, not tied to any individual's personal identity.</p>
         </div>
         <div class="card">
           <h3>Two ways in, one standard of security</h3>
-          <p>For company-managed devices, iSync365 can deploy a configuration profile the same way most enterprise tools do. For personal or unmanaged devices — no MDM, no company profile — we generate a separate, human-readable passphrase for that device's CardDAV account: long and random enough to resist brute-force guessing, short enough that someone can type it in by hand without errors. Each device gets its own distinct credential, and failed logins are rate-limited.</p>
+          <p>For company-managed devices, iSync365 can deploy a configuration profile the same way most enterprise tools do — the credential itself is never visible to the end user. For personal or unmanaged devices, setup is manual: an admin provides a secure passphrase, and can regenerate it at any time, instantly invalidating the old one.</p>
         </div>
         <div class="card">
-          <h3>Revocation happens automatically, no device cooperation required</h3>
-          <p>When someone's removed from a contact list, nothing needs to happen on their device. The connection can stay in place; it's simply empty of anything they no longer have access to. The next sync clears it out on its own — there's no remote wipe command to send and no dependency on a management profile being present to enforce it.</p>
+          <h3>Automatic revocation — no manual intervention, no exceptions</h3>
+          <p>When an employee is unassigned from a list, the associated contacts are automatically removed from every device — nothing for your team to track down, delete, or double-check. It happens the same way every time, with no one having to make it happen.</p>
         </div>
         <div class="card">
-          <h3>Clean offboarding, no orphaned data</h3>
-          <p>List membership functions as a real access-control decision, admin-controlled per list. When an employee leaves the company or changes roles, removing them from lists is the whole process — nothing lingers on a personal or field device after the fact.</p>
+          <h3>Flexibility that doesn't compromise data</h3>
+          <p>Reassigning someone — whether they're leaving the company or just changing roles — automatically clears the associated contacts from their personal device. Nothing for your team to manually delete, and nothing left behind afterward.</p>
         </div>
       </div>
 
       <div class="callout">
-        <h3>EAS vs. CardDAV — why the protocol underneath matters</h3>
-        <p>Many contact-sync tools rely on Exchange ActiveSync (EAS), a protocol Microsoft first shipped in the mid-2000s. Microsoft itself is now phasing it out: starting in 2026, Exchange Online will stop accepting outdated EAS client versions, and by the end of the year, EAS's legacy certificate-based authentication method is being retired in favor of modern, Entra ID-based authentication. Security researchers have also documented real vulnerabilities in legacy EAS implementations, including credential exposure under certain conditions.</p>
-        <p>iSync365 doesn't rely on EAS at all. Mobile devices connect over CardDAV, an open, modern standard — paired with per-device credentials and Microsoft Graph on the Outlook side, both built around current authentication practices rather than a protocol Microsoft is actively retiring.</p>
+        <h3>Built on modern standards, not a protocol being phased out</h3>
+        <p>Many contact-sync tools rely on an older Microsoft protocol called Exchange ActiveSync (EAS) — one Microsoft itself is actively retiring, with real security issues documented in older versions along the way. iSync365 doesn't use EAS at all. Mobile devices connect through CardDAV, an open, modern standard, and Outlook sync runs through Microsoft's current Graph platform — both built around today's security practices, not a protocol on its way out.</p>
       </div>
 
       <div class="callout" style="border-color:var(--teal); background:var(--mint-soft);">
         <h3>Zero-touch delivery, without requiring MDM</h3>
-        <p>On a company-managed device with MDM in place, a CardDAV profile can be silent and zero-touch — that's true for iSync365 and for comparable MDM-based tools alike. The real gap shows up on personal, unmanaged devices. Without MDM, delivery generally has to fall back to Outlook or Exchange ActiveSync — and because Apple automatically upgrades EAS connections to Microsoft 365 to use OAuth authentication, that path always requires the user to sign in manually. There's no way to pre-fill that step; it's a requirement of OAuth itself, not a configuration limitation.</p>
-        <p>iSync365's CardDAV connection works the same whether a device is managed or not, so it stays zero-touch even without MDM: the credential is included directly in the setup profile, and the address book appears fully configured — no sign-in step, no prompt, nothing for the employee to do.</p>
+        <p>Most tools can only deliver contacts zero-touch if the device is enrolled in MDM. Without MDM, the usual fallback path requires the employee to manually sign in to finish setup — there's no way around that step. iSync365's CardDAV connection doesn't have that limitation: it works the same whether a device is managed or not, so setup stays zero-touch either way, with nothing for the employee to do.</p>
       </div>
     </div>
   </section>
