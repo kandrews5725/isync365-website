@@ -13,7 +13,7 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   }
 
-  // Contact form (Formspree AJAX submit)
+  // Contact form (submit as JSON to isync365-server /contact-form endpoint)
   var form = document.getElementById('demo-form');
   if (form) {
     form.addEventListener('submit', function (e) {
@@ -23,10 +23,15 @@ document.addEventListener('DOMContentLoaded', function () {
       submitBtn.disabled = true;
       submitBtn.textContent = 'Sending...';
 
+      var payload = Object.fromEntries(new FormData(form));
+
       fetch(form.action, {
         method: 'POST',
-        body: new FormData(form),
-        headers: { 'Accept': 'application/json' }
+        headers: {
+          'Content-Type': 'application/json',
+          'Accept': 'application/json'
+        },
+        body: JSON.stringify(payload)
       }).then(function (response) {
         if (response.ok) {
           form.style.display = 'none';
