@@ -476,7 +476,10 @@ table.compare tr:last-child td { border-bottom: none; }
   padding: 40px;
   max-width: 620px;
   margin: 0 auto;
-  box-shadow: var(--shadow-card);
+  box-shadow:
+    0 2px 4px rgba(15, 27, 45, 0.06),
+    0 20px 48px -12px rgba(2, 112, 253, 0.18),
+    0 8px 20px -6px rgba(15, 27, 45, 0.1);
 }
 .field { margin-bottom: 20px; }
 .field label {
@@ -490,7 +493,7 @@ table.compare tr:last-child td { border-bottom: none; }
 .field input, .field select, .field textarea {
   width: 100%;
   padding: 12px 14px;
-  border: 1.5px solid var(--line);
+  border: 1.5px solid #C6D0DD;
   border-radius: 10px;
   font-family: var(--font-body);
   font-size: 0.96rem;
