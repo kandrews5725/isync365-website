@@ -504,7 +504,22 @@ table.compare tr:last-child td { border-bottom: none; }
 }
 
 /* ---------- Page hero (inner pages) ---------- */
-.page-hero { padding: 64px 0 20px; }
+.page-hero {
+  padding: 64px 0 20px;
+  position: relative;
+  overflow: hidden;
+  background: var(--bg-soft);
+}
+.page-hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(circle at 88% 8%, rgba(2, 194, 179, 0.22), transparent 45%),
+    radial-gradient(circle at 6% 95%, rgba(2, 112, 253, 0.16), transparent 50%);
+  pointer-events: none;
+}
+.page-hero .container { position: relative; z-index: 1; }
 .page-hero .eyebrow { margin-bottom: 14px; }
 .page-hero p.lede { font-size: 1.08rem; max-width: 60ch; }
 
