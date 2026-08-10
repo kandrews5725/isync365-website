@@ -469,6 +469,19 @@ table.compare tr:last-child td { border-bottom: none; }
 .faq-item p { margin: 0; }
 
 /* ---------- Form (Contact) ---------- */
+/* ---------- Product screenshots ---------- */
+.product-shot {
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--line);
+  box-shadow:
+    0 2px 4px rgba(15, 27, 45, 0.06),
+    0 24px 56px -16px rgba(2, 112, 253, 0.2),
+    0 10px 24px -8px rgba(15, 27, 45, 0.12);
+  overflow: hidden;
+  width: 100%;
+}
+.product-shot img { display: block; width: 100%; height: auto; }
+
 .form-card {
   background: #fff;
   border: 1px solid var(--line);
