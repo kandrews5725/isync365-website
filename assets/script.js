@@ -53,4 +53,20 @@ document.addEventListener('DOMContentLoaded', function () {
       });
     });
   }
+
+  // Product screenshot scroll-reveal + shine effect
+  var shots = document.querySelectorAll('.product-shot');
+  if (shots.length && 'IntersectionObserver' in window) {
+    var shotObserver = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('is-visible');
+          shotObserver.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.25 });
+    shots.forEach(function (shot) { shotObserver.observe(shot); });
+  } else {
+    shots.forEach(function (shot) { shot.classList.add('is-visible'); });
+  }
 });

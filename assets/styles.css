@@ -471,6 +471,7 @@ table.compare tr:last-child td { border-bottom: none; }
 /* ---------- Form (Contact) ---------- */
 /* ---------- Product screenshots ---------- */
 .product-shot {
+  position: relative;
   border-radius: var(--radius-lg);
   border: 1px solid var(--line);
   box-shadow:
@@ -479,8 +480,41 @@ table.compare tr:last-child td { border-bottom: none; }
     0 10px 24px -8px rgba(15, 27, 45, 0.12);
   overflow: hidden;
   width: 100%;
+  opacity: 0;
+  transform: translateY(28px) scale(0.98);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+.product-shot.is-visible {
+  opacity: 1;
+  transform: translateY(0) scale(1);
 }
 .product-shot img { display: block; width: 100%; height: auto; }
+.product-shot::after {
+  content: "";
+  position: absolute;
+  top: 0; left: 0;
+  width: 60%; height: 100%;
+  background: linear-gradient(
+    100deg,
+    transparent 30%,
+    rgba(255, 255, 255, 0.35) 48%,
+    rgba(255, 255, 255, 0.55) 50%,
+    rgba(255, 255, 255, 0.35) 52%,
+    transparent 70%
+  );
+  transform: translateX(-160%) skewX(-12deg);
+  pointer-events: none;
+}
+.product-shot.is-visible::after {
+  animation: shot-shine 1.3s ease-out 0.5s 1 forwards;
+}
+@keyframes shot-shine {
+  to { transform: translateX(220%) skewX(-12deg); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .product-shot { opacity: 1; transform: none; transition: none; }
+  .product-shot.is-visible::after { animation: none; }
+}
 
 .form-card {
   background: #fff;
