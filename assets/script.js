@@ -36,6 +36,9 @@ document.addEventListener('DOMContentLoaded', function () {
         if (response.ok) {
           form.style.display = 'none';
           document.getElementById('form-success').style.display = 'block';
+          if (typeof gtag === 'function') {
+            gtag('event', 'conversion', {'send_to': 'AW-18380112375/h5DtCJujxd8cEPeDqbxE'});
+          }
         } else {
           status.textContent = "Something went wrong — please try again, or email us directly.";
           status.style.display = 'block';
