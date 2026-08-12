@@ -75,6 +75,11 @@
     <div class="container" style="max-width:760px;">
 
       <div class="faq-item">
+        <h3>Will this mix in with my personal contacts?</h3>
+        <p>No. On iPhone, iSync365 creates its own separate contacts account — completely separate from your personal iCloud contacts. It shows up everywhere personal contacts do (Phone, Messages, FaceTime), but it's never merged with anything already on the device. Nothing gets deleted, reorganized, or combined with what's already there. If someone ever loses access to a list, only that separate business account is affected — their personal contacts are never touched.</p>
+      </div>
+
+      <div class="faq-item">
         <h3>Why iPhone, and not every mobile platform?</h3>
         <p>iSync365's mobile delivery runs on CardDAV, the standard behind separate, named address books. CardDAV is built into iOS natively — no extra app, no extra setup. On Android, it isn't: getting the same result requires installing and configuring a separate third-party app first, which changes the "no MDM, zero-touch" experience we've built the product around.</p>
         <p>For business-owned devices, that's why we built and support iSync365 around iPhone first. It even works on personal iPhones that aren't managed by the business — fully unmanaged, with no app to install. We'd rather do iPhone well than every platform partially. Broader device support is something we're evaluating, not something we're ruling out.</p>
@@ -89,7 +94,12 @@
       <div class="faq-item">
         <h3>Why not just use the Global Address List and Outlook's Save Contacts?</h3>
         <p>Every Microsoft 365 tenant already includes a Global Address List (GAL) — your organization's built-in directory. But having a GAL doesn't mean those contacts show up anywhere useful. GAL entries are searchable — you can look someone up if you already know their name — but they're not a browsable directory you can scroll through, they can't be organized into separate lists, and they don't sync to your phone's native contacts app at all.</p>
-        <p>Outlook's "Save Contacts" option doesn't help with this either: it only syncs whatever's already sitting in your personal Outlook Contacts folder, not the GAL itself. Getting a whole department's worth of contacts onto a phone this way means manually opening each person's entry in the GAL and clicking "Add to Contacts," one at a time. Manually adding an Exchange account instead gets some separation, but relies on Exchange ActiveSync (EAS), a protocol Microsoft is actively retiring, as covered on our <a href="security.html">Security &amp; Compliance page</a>. iSync365 solves the core problem directly: pushing specific lists into Outlook and onto the phone via CardDAV creates a real, scrollable, organized directory — automatically, for everyone, not one contact at a time.</p>
+        <p>Outlook's "Save Contacts" option doesn't help with this either: it only syncs whatever's already sitting in your personal Outlook Contacts folder, not the GAL itself. Getting a whole department's worth of contacts onto a phone this way means manually opening each person's entry in the GAL and clicking "Add to Contacts," one at a time. Manually adding an Exchange account instead gets some separation, but comes with its own limitation: EAS support for subfolders is inconsistent across devices — any folders you've built in Outlook to stay organized (Vendors, Sales Team, whatever structure fits your business) may not display at all, or may get flattened into one list, depending on the phone. On top of that, EAS is a protocol Microsoft is actively retiring, as covered on our <a href="security.html">Security &amp; Compliance page</a>. iSync365 solves the core problem directly: pushing specific lists into Outlook and onto the phone via CardDAV creates a real, scrollable, organized directory — automatically, for everyone, not one contact at a time.</p>
+      </div>
+
+      <div class="faq-item">
+        <h3>What happens to someone's contacts when they leave the business?</h3>
+        <p>Every list is assigned to specific people, not blasted out to everyone. When someone joins, you add them to whichever lists match their role, and their device automatically gets exactly what they need — nothing more. When someone leaves, or changes roles, you simply remove them from the list, or remove their account entirely. From that point, there's nothing left for their phone or Outlook to pull, because the contacts were never tied to a folder sitting on the device — they were tied to their account. The next time their device checks in, whatever they'd been receiving comes off automatically. Nothing to track down, nothing to manually delete — and it works exactly the same whether it's a company-managed phone or someone's own personal device.</p>
       </div>
 
       <div class="faq-item">
@@ -100,6 +110,11 @@
       <div class="faq-item">
         <h3>What about calendar sync?</h3>
         <p>Some tools in this space bundle shared-calendar sync as part of their pitch. Outlook mobile now natively supports toggling visibility for shared and resource calendars — conference rooms, team schedules, and the like — right in the app. That's largely closed the gap calendar-sync add-ons were built to solve. iSync365 stays focused on the problem Outlook and your phone still can't solve on their own: getting your company's contact directory onto every device, organized the way your business actually works.</p>
+      </div>
+
+      <div class="faq-item">
+        <h3>We don't have an IT department — is this too complicated for us?</h3>
+        <p>Not at all — iSync365 was built with exactly this in mind. Whoever manages your Microsoft 365 today, whether that's you or an office manager, can set this up themselves; it doesn't require ongoing technical maintenance once your lists are built. And for any devices that aren't centrally managed by the business, we walk through setup with you directly during onboarding, so nobody's left guessing on their own.</p>
       </div>
 
       <div class="faq-item">
