@@ -716,7 +716,6 @@ table.compare tr:last-child td { border-bottom: none; }
 .pricing-video-box {
   position: relative;
   width: 100%;
-  max-width: 480px;
   aspect-ratio: 16 / 9;
   border-radius: var(--radius-md);
   overflow: hidden;
