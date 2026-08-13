@@ -717,6 +717,7 @@ table.compare tr:last-child td { border-bottom: none; }
   position: relative;
   width: 100%;
   max-width: 480px;
+  aspect-ratio: 16 / 9;
   border-radius: var(--radius-md);
   overflow: hidden;
   background: var(--navy);
@@ -729,7 +730,8 @@ table.compare tr:last-child td { border-bottom: none; }
 .pricing-video-thumbnail {
   display: block;
   width: 100%;
-  height: auto;
+  height: 100%;
+  object-fit: cover;
 }
 .pricing-video-btn {
   position: absolute;
@@ -746,8 +748,9 @@ table.compare tr:last-child td { border-bottom: none; }
   box-shadow: 0 8px 20px rgba(0,0,0,0.3);
 }
 .pricing-video-box iframe {
-  display: block;
+  position: absolute;
+  inset: 0;
   width: 100%;
-  aspect-ratio: 16 / 9;
+  height: 100%;
   border: 0;
 }
