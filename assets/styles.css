@@ -730,6 +730,34 @@ table.compare tr:last-child td { border-bottom: none; }
 .faq-text-collapsed.is-open { max-height: 600px; }
 .faq-text-collapsed p { padding-top: 4px; }
 
+/* ---------- Mobile-only video collapse ---------- */
+.faq-video-toggle {
+  display: none;
+  align-items: center;
+  gap: 6px;
+  background: none;
+  border: none;
+  padding: 0;
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 0.88rem;
+  color: var(--teal-dark);
+  cursor: pointer;
+  margin: 10px 0 4px;
+}
+.faq-video-toggle .chev { transition: transform 0.2s ease; }
+.faq-video-toggle[aria-expanded="true"] .chev { transform: rotate(180deg); }
+@media (max-width: 760px) {
+  .faq-video-toggle { display: inline-flex; }
+  .faq-video-collapsed {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.35s ease;
+  }
+  .faq-video-collapsed.is-open { max-height: 400px; }
+  .faq-video-collapsed .faq-video-wrap { margin-top: 8px; }
+}
+
 /* ---------- Pricing page video (troubleshooting build, distinct from FAQ video component) ---------- */
 .pricing-video-box {
   position: relative;

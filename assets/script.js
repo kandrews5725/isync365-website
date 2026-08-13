@@ -97,6 +97,17 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   });
 
+  // FAQ video toggle (mobile-only: expand/collapse the video thumbnail itself)
+  document.querySelectorAll('.faq-video-toggle').forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      var target = document.getElementById(btn.getAttribute('data-target'));
+      var expanded = btn.getAttribute('aria-expanded') === 'true';
+      btn.setAttribute('aria-expanded', String(!expanded));
+      if (target) target.classList.toggle('is-open');
+      btn.querySelector('.label').textContent = expanded ? 'Watch the video' : 'Hide the video';
+    });
+  });
+
   // Pricing page video (separate, self-contained handler for troubleshooting)
   var pricingVideoBox = document.getElementById('pricing-video-box');
   if (pricingVideoBox) {
