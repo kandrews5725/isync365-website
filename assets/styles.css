@@ -475,6 +475,23 @@ table.compare tr:last-child td { border-bottom: none; }
 }
 @media (max-width: 760px) {
   .faq-columns-explicit { grid-template-columns: 1fr; }
+  .faq-col { display: contents; }
+  .faq-order-1  { order: 1; }
+  .faq-order-2  { order: 2; }
+  .faq-order-3  { order: 3; }
+  .faq-order-4  { order: 4; }
+  .faq-order-5  { order: 5; }
+  .faq-order-6  { order: 6; }
+  .faq-order-7  { order: 7; }
+  .faq-order-8  { order: 8; }
+  .faq-order-9  { order: 9; }
+  .faq-order-10 { order: 10; }
+  .faq-order-11 { order: 11; }
+  .faq-order-12 { order: 12; }
+  .faq-order-13 { order: 13; }
+  .faq-order-14 { order: 14; }
+  .faq-order-15 { order: 15; }
+  .faq-order-16 { order: 16; }
 }
 
 /* ---------- Form (Contact) ---------- */
