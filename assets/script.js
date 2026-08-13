@@ -69,4 +69,31 @@ document.addEventListener('DOMContentLoaded', function () {
   } else {
     shots.forEach(function (shot) { shot.classList.add('is-visible'); });
   }
+
+  // FAQ video: click-to-load (privacy-enhanced, no iframe/cookies until clicked)
+  document.querySelectorAll('.faq-video-wrap').forEach(function (wrap) {
+    wrap.addEventListener('click', function () {
+      var videoId = wrap.getAttribute('data-video-id');
+      if (!videoId) return;
+      var iframe = document.createElement('iframe');
+      iframe.src = 'https://www.youtube-nocookie.com/embed/' + videoId + '?autoplay=1&rel=0&modestbranding=1&cc_load_policy=1';
+      iframe.title = 'iSync365 FAQ video';
+      iframe.setAttribute('allow', 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture');
+      iframe.setAttribute('allowfullscreen', '');
+      wrap.innerHTML = '';
+      wrap.appendChild(iframe);
+      wrap.style.cursor = 'default';
+    });
+  });
+
+  // FAQ text toggle (expand/collapse the written answer beneath a video)
+  document.querySelectorAll('.faq-toggle-text').forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      var target = document.getElementById(btn.getAttribute('data-target'));
+      var expanded = btn.getAttribute('aria-expanded') === 'true';
+      btn.setAttribute('aria-expanded', String(!expanded));
+      if (target) target.classList.toggle('is-open');
+      btn.querySelector('.label').textContent = expanded ? 'Read the answer' : 'Hide the answer';
+    });
+  });
 });
