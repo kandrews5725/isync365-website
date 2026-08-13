@@ -96,4 +96,21 @@ document.addEventListener('DOMContentLoaded', function () {
       btn.querySelector('.label').textContent = expanded ? 'Read the answer' : 'Hide the answer';
     });
   });
+
+  // Pricing page video (separate, self-contained handler for troubleshooting)
+  var pricingVideoBox = document.getElementById('pricing-video-box');
+  if (pricingVideoBox) {
+    pricingVideoBox.addEventListener('click', function () {
+      var ytId = pricingVideoBox.getAttribute('data-yt-id');
+      if (!ytId) return;
+      var iframe = document.createElement('iframe');
+      iframe.src = 'https://www.youtube-nocookie.com/embed/' + ytId + '?autoplay=1&rel=0&modestbranding=1&cc_load_policy=1';
+      iframe.title = 'iSync365 pricing video';
+      iframe.setAttribute('allow', 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture');
+      iframe.setAttribute('allowfullscreen', '');
+      pricingVideoBox.innerHTML = '';
+      pricingVideoBox.appendChild(iframe);
+      pricingVideoBox.style.cursor = 'default';
+    });
+  }
 });
