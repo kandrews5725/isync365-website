@@ -1,0 +1,58 @@
+<svg viewBox="0 0 900 700" xmlns="http://www.w3.org/2000/svg" font-family="'Segoe UI', Arial, sans-serif">
+  <rect x="0" y="0" width="900" height="700" fill="#ffffff"/>
+
+  <text x="450" y="38" text-anchor="middle" font-size="24" font-weight="700" fill="#0f2a2e">Security vs. Features</text>
+  <text x="450" y="62" text-anchor="middle" font-size="14" fill="#5a6b6d">How iSync365's mobile delivery options compare</text>
+
+  <!-- Plot area -->
+  <rect x="130" y="90" width="680" height="490" fill="#f7fafa" stroke="#dfe8e8" stroke-width="1"/>
+
+  <!-- Gridlines -->
+  <g stroke="#e5eeee" stroke-width="1">
+    <line x1="260" y1="90" x2="260" y2="580"/>
+    <line x1="390" y1="90" x2="390" y2="580"/>
+    <line x1="520" y1="90" x2="520" y2="580"/>
+    <line x1="650" y1="90" x2="650" y2="580"/>
+    <line x1="780" y1="90" x2="780" y2="580"/>
+    <line x1="130" y1="188" x2="810" y2="188"/>
+    <line x1="130" y1="286" x2="810" y2="286"/>
+    <line x1="130" y1="384" x2="810" y2="384"/>
+    <line x1="130" y1="482" x2="810" y2="482"/>
+  </g>
+
+  <!-- Quadrant dividers -->
+  <line x1="470" y1="90" x2="470" y2="580" stroke="#c7d6d6" stroke-width="1.5" stroke-dasharray="4,4"/>
+  <line x1="130" y1="335" x2="810" y2="335" stroke="#c7d6d6" stroke-width="1.5" stroke-dasharray="4,4"/>
+
+  <!-- Axes -->
+  <line x1="130" y1="580" x2="810" y2="580" stroke="#0f2a2e" stroke-width="2"/>
+  <line x1="130" y1="90" x2="130" y2="580" stroke="#0f2a2e" stroke-width="2"/>
+  <polygon points="810,580 798,574 798,586" fill="#0f2a2e"/>
+  <polygon points="130,90 124,102 136,102" fill="#0f2a2e"/>
+
+  <text x="470" y="620" text-anchor="middle" font-size="16" font-weight="600" fill="#0f2a2e">Features →</text>
+  <text x="80" y="335" text-anchor="middle" font-size="16" font-weight="600" fill="#0f2a2e" transform="rotate(-90 80 335)">Security →</text>
+
+  <text x="150" y="600" font-size="12" fill="#5a6b6d">Fewer features</text>
+  <text x="770" y="600" text-anchor="end" font-size="12" fill="#5a6b6d">More features</text>
+  <text x="120" y="575" text-anchor="end" font-size="12" fill="#5a6b6d">Less secure</text>
+  <text x="120" y="100" text-anchor="end" font-size="12" fill="#5a6b6d">More secure</text>
+
+  <!-- 1. Mobile App - Directory Only: single dot, navy -->
+  <circle cx="292" cy="110" r="9" fill="#081A33"/>
+  <text x="292" y="139" text-anchor="middle" font-size="13" font-weight="700" fill="#0f2a2e">Mobile App — Directory Only</text>
+  <text x="292" y="155" text-anchor="middle" font-size="11" fill="#5a6b6d">iPhone &amp; Android — nothing written to device</text>
+
+  <!-- 2. Mobile App + Caller ID (iPhone-specific tier): single dot, amber -->
+  <circle cx="504" cy="215" r="9" fill="#f59e0b"/>
+  <text x="504" y="244" text-anchor="middle" font-size="13" font-weight="600" fill="#0f2a2e">Mobile App — Caller ID Only</text>
+  <text x="504" y="260" text-anchor="middle" font-size="11" fill="#5a6b6d">iPhone only</text>
+
+  <!-- 3. Native Contacts Integration (Mobile App): single dot, teal -->
+  <circle cx="718" cy="288" r="9" fill="#09C7B7"/>
+  <text x="718" y="317" text-anchor="middle" font-size="13" font-weight="700" fill="#0f2a2e">Native Contacts Integration</text>
+  <text x="718" y="333" text-anchor="middle" font-size="11" fill="#5a6b6d">iPhone: built in, no app needed</text>
+  <text x="718" y="348" text-anchor="middle" font-size="11" fill="#5a6b6d">Android: via Mobile App, Caller ID + messaging</text>
+
+  <text x="450" y="665" text-anchor="middle" font-size="11" font-style="italic" fill="#8a9a9a">Relative positioning for illustration — not a precise scientific measurement.</text>
+</svg>
