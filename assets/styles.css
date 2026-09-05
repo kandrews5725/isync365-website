@@ -492,6 +492,9 @@ table.compare tr:last-child td { border-bottom: none; }
   .faq-order-14 { order: 14; }
   .faq-order-15 { order: 15; }
   .faq-order-16 { order: 16; }
+  .faq-order-17 { order: 17; }
+  .faq-order-18 { order: 18; }
+  .faq-order-19 { order: 19; }
 }
 
 /* ---------- Form (Contact) ---------- */
